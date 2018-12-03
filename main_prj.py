@@ -2,6 +2,7 @@ import numpy as np
 from biopandas.mol2 import PandasMol2
 import pandas as pd
 
+input_file = "fragment.mol2"
 
 def splitter(str):
         a=str.split()
@@ -10,8 +11,8 @@ def splitter(str):
 ##here, this way i can obtain a new string with alla the terms i need
 
 def readmol2():
-        fn=open(input(),"r")
-        mol2=[x for x in fn.readlines()]
+        fn=open(input_file,"r")
+        mol2=fn.readlines()
         fn.close()
         return (mol2)
 
